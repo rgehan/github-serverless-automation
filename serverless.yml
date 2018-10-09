@@ -4,6 +4,8 @@ provider:
   name: aws
   runtime: nodejs8.10
   profile: serverless-rgehan
+  environment:
+    GITHUB_TOKEN: ${file(./env.json):GITHUB_TOKEN}
 
 plugins:
   - serverless-offline
